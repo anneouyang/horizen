@@ -23,7 +23,7 @@ This is an ideal situation:
 Removing the guarantee of no network delays:
 
 - Assume that all nodes are behaving honestly
-- Due to network delays, nodes might be adding "old blocks" to the main chain in a non-malicious intent, and these blocks have penalty associated with them
+- Due to network delays, nodes might be adding "old blocks" to the main chain with a non-malicious intent, and these blocks have penalty associated with them
 
 **Implementation Assumptions**: Organize the nodes into a network where the propagation of information along different edges takes an varying amount of time (determined randomly from a range), and nodes always send and receive information along the fastest routes (shortest paths). Essentially, in this model, the nodes don't always receive the most up-to-date information about the main chain.
 
