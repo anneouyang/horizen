@@ -30,7 +30,14 @@ class Chain():
 
 	def chain_converge(self):
 		max_height_blocks = [b for b in self.blocks if (b.height == self.main_chain_max_height and b.score <= 0)]
-		return len(max_height_blocks) == 1
+		return len(max_height_blocks) <= 1
+
+	def get_chain_at_height(self, h):
+		blocks_at_height = [b for b in self.blocks if (b.height == h and b.score <= 0)]
+		return blocks_at_height
+
+	def chain_converge_at_height(self, h):
+		return (len(self.get_chain_at_height(h)) <= 1)
 
 	def delay_function(self, block):
 		height_diff = self.main_chain_max_height - block.height
@@ -49,10 +56,7 @@ class Chain():
 
 	def add_block(self, block):
 		block.ID = self.get_next_block_ID()
-		# for b in self.blocks:
-		# 	print(b.ID, block.prev.ID)
 		prev_block = [b for b in self.blocks if b.ID == block.prev.ID]
-		# print(prev_block)
 		if(prev_block == []):
 			return
 		prev_block = prev_block[0]
@@ -75,5 +79,10 @@ class Chain():
 				self.print_gen_block(b)
 			else:
 				self.print_block(b)
-			print(self.chain_converge())
+
+	def print_main_chain_head(self):
+		print("Main chain head after", len(self.blocks), "blocks: ", self.get_main_chain().ID)
+
+	def print_chain_converge_at_height(self, h):
+		print("Chain converges at height", h, ": ", self.chain_converge_at_height(h))
 			
