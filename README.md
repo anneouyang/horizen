@@ -35,5 +35,16 @@ Removing the guarantee of no network delays:
 
 ## Model 3
 
-Malicious nodes intend to corrupt the blockchain without considering their own interests.
+There's one attempt at chain reorganization
 
+
+
+## Model 4
+
+There are multiple attempts at chain reorganization
+
+
+
+## Model 5
+
+There are sporadic disconnections in the network
