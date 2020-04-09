@@ -29,7 +29,7 @@ Removing the guarantee of no network delays:
 
 **Result**: The protocol appears to be working in the way it is described without chain splits, and the height of the main chain grows linearly with time:
 
-![](/Users/anneouyang/Github/horizen/model_2/res/time_height.png)
+![](/model_2/res/time_height.png)
 
 
 
