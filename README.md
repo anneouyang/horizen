@@ -25,13 +25,15 @@ Removing the guarantee of no network delays:
 - Assume that all nodes are behaving honestly
 - Due to network delays, nodes might be adding "old blocks" to the main chain in a non-malicious intent, and these blocks have penalty associated with them
 
-**Implementation Assumptions**: Organize the nodes into a network where the propagation of information along edges takes different amounts of time, and find the shortest paths (fastest routes) to send information from a node to other nodes. Essentially, the nodes don't always necessarily receive the most up-to-date information about the main chain. 
+**Implementation Assumptions**: Organize the nodes into a network where the propagation of information along different edges takes an varying amount of time (determined randomly from a range), and nodes always send and receive information along the fastest routes (shortest paths). Essentially, in this model, the nodes don't always receive the most up-to-date information about the main chain.
 
-**Result**: 
+**Result**: The protocol appears to be working in the way it is described without chain splits, and the height of the main chain grows linearly with time:
+
+![](/Users/anneouyang/Github/horizen/model_2/res/time_height.png)
 
 
 
 ## Model 3
 
-Malicious nodes that are intended to corrupt the blockchain without considering their own interests.
+Malicious nodes intend to corrupt the blockchain without considering their own interests.
 

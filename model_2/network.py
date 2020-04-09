@@ -11,11 +11,15 @@ class Network():
 			for j in range(i + 1, self.num_nodes):
 				if i == j:
 					continue
-				self.A[i][j] = random.randint(min_delay, max_delay + 1)
+				self.A[i][j] = random.randint(min_delay, max_delay)
 				self.A[j][i] = self.A[i][j]
 		# self.print_graph()
 		self.floyd_warshall()
-		# self.print_graph()
+		self.print_graph()
+
+	def set_graph(self, graph):
+		self.A = graph
+		self.floyd_warshall()
 
 	# compute all-pairs shortest path
 	def floyd_warshall(self):
