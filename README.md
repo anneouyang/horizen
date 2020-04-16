@@ -16,7 +16,7 @@ This is an ideal situation:
 
 **Result**: The protocol appears to be working in the way it is described, and a chain split has not been observed
 
-![Model 1 Picture 1](./res/m1p1.png)
+![Model 1 Picture 1](./res/m1p1.png | width = 100)
 
 
 
