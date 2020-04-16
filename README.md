@@ -16,7 +16,7 @@ This is an ideal situation:
 
 **Result**: The protocol appears to be working in the way it is described, and a chain split has not been observed
 
-<img src="./res/m1p1.png" alt="m1p1" style="zoom:50%;" />
+![Model 1 Picture 1](./res/m1p1.png)
 
 
 
@@ -31,11 +31,11 @@ Removing the guarantee of no network delays:
 
 **Result**: Even with delays, given a sufficiently long "wait period" where no new blocks are being added, the nodes will eventually "catch up" with the information and reach consensus:
 
-<img src="./res/m2p1.png" alt="m2p2" style="zoom:50%;" />
+![Model 2 Pic 1](./res/m2p1.png)
 
 If the delay is sufficiently high, the blockchain may be very not converge at first; however, it will converge if given enough time for the network to settle (i.e. no new nodes are added to the blockchain)
 
-<img src="./res/m2p2.png" alt="m2p2" style="zoom:50%;" />
+![m2p2](./res/m2p2.png)
 
 
 
@@ -47,19 +47,19 @@ First, assume there is negligible network delay; here are the cases where the at
 
 - <50% of the total computing power:
 
-  <img src="./res/m3p1.png" style="zoom:50%;" />
+  ![](./res/m3p1.png)
 
 - 53% of the total computing power:
 
-  <img src="./res/m3p2.png" alt="m3p2" style="zoom:50%;" />
+  ![](./res/m3p2.png)
 
 - 68% of the total computing power:
 
-  <img src="./res/m3p3.png" style="zoom:50%;" />
+  ![](./res/m3p3.png)
 
 When there is significant network delay, the network may fail to reach consensus:
 
-<img src="./res/m3p4.png" style="zoom:50%;" />
+![](./res/m3p4.png)
 
 
 
@@ -71,11 +71,11 @@ When there are no network delays, the group of nodes with the most computing pow
 
 In this case, 3 groups of node are trying to launch attacks, and one ends up dominating:
 
-<img src="./res/m4p1.png" style="zoom:50%;" />![](./res/m4p2.png)
+![](./res/m4p1.png)
 
 When there are network delays and multiple malicious nodes trying to launch 51% attacks, the network may fail to reach consensus eventually:
 
-<img src="./res/m4p1.png" style="zoom: 67%;" />![](./res/m4p2.png)![](./res/m5p1.png)
+![](./res/m4p2.png)
 
 
 
@@ -83,4 +83,4 @@ When there are network delays and multiple malicious nodes trying to launch 51% 
 
 Initially, two parts of the networks are disjoint. The attempt to merge them together after a certain amount of time has elapsed is not successful. Because of the large values of the delay penalties, the nodes in the two parts of the network will continue to perform as if the merge never existed.
 
-<img src="./res/m5p1.png" style="zoom:50%;" />
+![](./res/m5p1.png)
