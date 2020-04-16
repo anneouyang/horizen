@@ -3,7 +3,7 @@ A simulation of how the blockchain network behaves under different conditions wi
 
 
 
-## Model 1
+## Model 1 - No delays no attacks
 
 This is an ideal situation:
 
@@ -20,7 +20,7 @@ This is an ideal situation:
 
 
 
-## Model 2
+## Model 2 - Delays, no attacks
 
 Removing the guarantee of no network delays:
 
@@ -39,7 +39,7 @@ If the delay is sufficiently high, the blockchain may be very not converge at fi
 
 
 
-## Model 3
+## Model 3 - One attacking group, delays and no delays
 
 There's one malicious node attempting to cause a chain reorganization. 
 
@@ -63,7 +63,7 @@ When there is significant network delay, the network may fail to reach consensus
 
 
 
-## Model 4
+## Model 4 - Multiple attacking groups, delays and no delays
 
 There are multiple malicious nodes attempting at chain reorganization.
 
@@ -77,3 +77,10 @@ When there are network delays and multiple malicious nodes trying to launch 51% 
 
 ![](./res/m4p2.png)
 
+
+
+## Model 5 - Merging two disjoint parts of the network
+
+Initially, two parts of the networks are disjoint. The attempt to merge them together after a certain amount of time has elapsed is not successful. Because of the large values of the delay penalties, the nodes in the two parts of the network will continue to perform as if the merge never existed.
+
+![](./res/m5p1.png)
